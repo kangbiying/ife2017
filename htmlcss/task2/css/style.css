@@ -1,0 +1,23 @@
+body{background-color:#eee;font-family:'微软雅黑';font-size:14px;}
+*{box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;}
+header{height:60px;}
+.hd-nav>li{float:left;}
+.hd-nav>li a{color:#333;text-decoration:none;display:inline-block;margin-left:25px;margin-top:8px;font-size:16px;}
+.hd-nav>li a:hover{color:blue;}
+article,aside{border-radius:3px;box-shadow:0 5px 10px #ccc;-webkit-box-shadow:0 5px 10px #ccc;-moz-box-shadow:0 5px 10px #ccc;-o-box-shadow:0 5px 10px #ccc;-ms-box-shadow:0 5px 10px #ccc;}
+article>p{line-height:24px;}
+figure{border:1px solid #ccc;width:180px;padding:10px;}
+figcaption{margin-bottom:10px;text-align:center;}
+figure>img{width:100%;}
+.in-table tr th,.in-table tr td{border:1px solid #ccc;padding-left:5px;line-height:30px;}
+.in-table thead{background:#333;color:#fff;}
+.in-table tfoot{background:#ccc;}
+.asd-tit{border-left:2px solid #ccc;padding-left:15px;line-height:30px;}
+.asd-form{width:800px;margin:0 auto;}
+.flabel label,.fintro{display:inline-block;width:120px;text-align:right;}
+.flabel input{line-height:22px;}
+.fchose label{margin-right:10px;}
+.fav>label input{display:inline-block;vertical-align:top;margin-right:5px;margin-top:4px;}
+.pertxt textarea{display:inline-block;vertical-align:top;}
+.sub-btn{width:230px;height:40px;line-height:40px;background:#03A9F4;border:0;color:#fff;margin:20px auto;display:block;border-radius:5px;}
+footer{background:#333;}
