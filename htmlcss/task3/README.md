@@ -3,9 +3,11 @@
 * 掌握HTML/CSS布局的概念<br/>
 * 掌握盒模型的概念<br/>
 * 掌握position与float的概念以及在布局时的用法<br/>
+  
 ##任务描述
-使用 HTML 与 CSS 按照[示例图（点击查看）](http://7xrp04.com1.z0.glb.clouddn.com/task_1_3_1.png)实现三栏式布局。<br/>
-左右两栏宽度固定，中间一栏根据父元素宽度填充满，最外面的框应理解为浏览器。背景色为 #eee 区域的高度取决于三个子元素中最高的高度。<br/>
+* 使用 HTML 与 CSS 按照[示例图（点击查看）](http://7xrp04.com1.z0.glb.clouddn.com/task_1_3_1.png)实现三栏式布局。<br/>
+* 左右两栏宽度固定，中间一栏根据父元素宽度填充满，最外面的框应理解为浏览器。背景色为 #eee 区域的高度取决于三个子元素中最高的高度。<br/>
+  
 ##任务注意事项
 * 尝试 position 和 float 的效果，思考它们的异同和应用场景。<br/>
 * 注意测试不同情况，尤其是极端情况下的效果。<br/>
@@ -13,6 +15,7 @@
 * 调节浏览器宽度，固定宽度和自适应宽度的效果始终符合预期。<br/>
 * 改变中间一栏的内容长度，以确保在中间一栏较高和右边一栏较高时，父元素的高度始终为子元素中最高的高度。<br/>
 * 其他效果图中给出的标识均被正确地实现。<br/>
+  
 ##参考资料
 * [MDN：position](https://developer.mozilla.org/zh-CN/docs/Web/CSS/position)：了解 CSS position 属性的基本知识<br/>
 * [MDN：float](https://developer.mozilla.org/en-US/docs/Web/CSS/float)：了解 CSS float 属性的基本知识<br/>
