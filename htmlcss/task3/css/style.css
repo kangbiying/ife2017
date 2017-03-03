@@ -21,10 +21,7 @@
 }
 .mbox-c{
 	width:auto;
-	position: absolute;
-	top:20px;
-	left:240px;
-	right:160px;
+	margin:0 140px 0 220px;
 }
 .mbox-r{
 	width:120px;
