@@ -1,29 +1,54 @@
-*{box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;}
-*{margin:0px; padding:0px;}
-
-
-.wtop{
+* {
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+}
+* {
+	margin: 0px;
+	padding: 0px;
+}
+.wtop {
 	width: 100%;
-	height: 300px;
-	border:1px solid #999;
+	height: auto;
+	border: 1px solid #999;	/*建立弹性框*/
+	display: -webkit-flex;
+	-webkit-flex-flow: row wrap;
+	-webkit-align-items: center;
+	-webkit-justify-content: space-between;
 	display: flex;
-	flex-flow:row wrap;  /*表示的是flex-diirection,flex-wrap*/
-	align-items:center;
-	justify-content:space-around;
+	flex-flow: row wrap;  /*表示的是flex-diirection,flex-wrap*/
+	align-items: center;
+	justify-content: space-between;
+	padding: 20px;
 }
-.wtop .box{
+.wtop .box {
 	width: 150px;
-	border:1px solid #f00;
-	
-	
-	/*align-content:center;*/
+	border: 1px solid #f00;
 }
-.fir{/*height: 120px;*/flex:1 120px;}
-.sec{/*height: 100px;*/flex:1 100px;}
-.third{/*height: 40px;*/flex:1 40px;}
-.four{/*height: 200px;*/border:1px solid #0f0!important;flex:1 200px;}
-
-@media screen and (max-width: 640px){
-	/*.wtop{ justify-content:flex-start;}*/
-	.four{order:-1;}
+.fir {
+	height: 120px;
+}
+.sec {
+	height: 100px;
+}
+.third {
+	height: 40px;
+}
+.four {
+	height: 200px;
+	border: 1px solid #0f0 !important;
+}
+@media screen and (max-width:640px) {
+	.wtop {
+		-webkit-align-items: flex-start;
+		align-items: flex-start;
+	}
+	.wtop .box {
+		margin-bottom: 20px;
+	}
+	.four {
+		order: -1;
+	}
 }
