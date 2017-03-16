@@ -1,0 +1,93 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>IFE JavaScript Task 03</title>
+  </head>
+<body>
+  <ul id="source">
+    <li>北京空气质量：<b>90</b></li>
+    <li>上海空气质量：<b>70</b></li>
+    <li>天津空气质量：<b>80</b></li>
+    <li>广州空气质量：<b>50</b></li>
+    <li>深圳空气质量：<b>40</b></li>
+    <li>福州空气质量：<b>32</b></li>
+    <li>成都空气质量：<b>90</b></li>
+  </ul>
+  <ul id="resort">
+    <!-- 
+    <li>第一名：北京空气质量：<b>90</b></li>
+    <li>第二名：北京空气质量：<b>90</b></li>
+    <li>第三名：北京空气质量：<b>90</b></li>
+     -->
+  </ul>
+  <button id="sort-btn">排序</button>
+<script type="text/javascript">
+/**
+ * getData方法
+ * 读取id为source的列表，获取其中城市名字及城市对应的空气质量
+ * 返回一个数组，格式见函数中示例
+ */
+function getData() {
+  var sli=document.querySelectorAll('#source li');
+  var data=[];
+  for(var i=0;i<sli.length;i++){
+    //使用split把字符串分割为字符串数组
+    data[i]=sli[i].innerText.split('空气质量：');
+    //将字符串转换为数字
+    data[i][1] = parseInt(data[i][1]);
+  }
+  // console.log(data);
+  return data;
+}
+/**
+ * sortAqiData
+ * 按空气质量对data进行从小到大的排序
+ * 返回一个排序后的数组
+ */
+function sortAqiData(data) {
+  //冒泡排序 
+  // for(var i=0;i<data.length;i++){
+  //   for(var j=0;j<data.length-1;j++){
+  //     if(data[j][1]<data[j+1][1]){
+  //       var t=data[j];
+  //       data[j]=data[j+1];
+  //       data[j+1]=t;
+  //     }
+  //   }
+  // }
+  //sort排序的简单版
+  data.sort(function(x,y){
+    return y[1]-x[1];
+  })
+  return data;
+}
+/**
+ * render
+ * 将排好序的城市及空气质量指数，输出显示到id位resort的列表中
+ * 格式见ul中的注释的部分
+ */
+function render(data) {
+  var list=document.getElementById('resort');
+  //forEach和for循环作用同
+  data.forEach(function(value,index){
+      var liMsg=document.createElement('li');
+      liMsg.innerHTML='<li>第'+(index+1)+'名：'+data[index][0]+'空气质量：<b>'+data[index][1]+'</b></li>';
+      list.appendChild(liMsg);
+  })
+}
+function btnHandle() {
+  var aqiData = getData();
+  aqiData = sortAqiData(aqiData);
+  render(aqiData);
+}
+function init() {
+  // 在这下面给sort-btn绑定一个点击事件，点击时触发btnHandle函数
+  var sbtn=document.getElementById('sort-btn');
+  sbtn.onclick=btnHandle;
+}
+init();
+
+</script>
+</body>
+</html>
